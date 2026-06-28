@@ -1,6 +1,6 @@
 <div class="background">
 
-<div class="overlay">
+<div class="overlay" (click)="hideMessage()">
 
 <h1 class="title">
 🌳 Happy Vat Purnima 🌳
@@ -8,11 +8,11 @@
 
 <div class="heart">❤️</div>
 
-<button (click)="surprise()">
+<button (click)="surprise(); $event.stopPropagation()">
 Click Here ❤️
 </button>
 
-<div *ngIf="showMessage" class="message">
+<div *ngIf="showMessage" class="message" (click)="$event.stopPropagation()">
 
 <img src="/assets/background.jpg" class="message-image">
 
