@@ -145,6 +145,119 @@ border-radius:10px;
 
 }
 
+.action-area{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.secondary-button{
+  margin-top:20px;
+  padding:16px 36px;
+  font-size:20px;
+  background:#28a745;
+  color:white;
+  border-radius:40px;
+  box-shadow:0 0 20px rgba(40,167,69,.4);
+}
+
+.question-panel{
+  margin-top:30px;
+  position:relative;
+  width:100%;
+  max-width:700px;
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.question-text{
+  font-size:24px;
+  margin-bottom:24px;
+}
+
+.option-buttons{
+  position:relative;
+  min-height:120px;
+}
+
+.yes-button,
+.no-button{
+  position:relative;
+  min-width:120px;
+  padding:14px 24px;
+  border:none;
+  border-radius:30px;
+  font-size:20px;
+  color:white;
+  cursor:pointer;
+  transition:transform .2s ease, background .2s ease;
+}
+
+.yes-button{
+  background:#28a745;
+  margin-right:20px;
+}
+
+.yes-button:hover{
+  transform:scale(1.05);
+}
+
+.no-button{
+  position:absolute;
+  top:20px;
+  left:160px;
+  background:#dc3545;
+}
+
+.no-button:hover{
+  transform:scale(1.05);
+}
+
+.dance-panel{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+.dance-hearts{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+.dance-heart{
+  font-size:54px;
+  display:inline-block;
+  animation:dance 0.9s ease-in-out infinite alternate;
+}
+
+.dance-heart:nth-child(2){
+  animation-delay:0.18s;
+}
+
+.dance-heart:nth-child(3){
+  animation-delay:0.36s;
+}
+
+.dance-text{
+  font-size:26px;
+  color:#ffd700;
+  text-shadow:2px 2px 8px rgba(0,0,0,.5);
+}
+
+.final-message{
+  margin-top:30px;
+  font-size:28px;
+  font-weight:700;
+  color:#ffb6c1;
+}
+
 .heart{
 
 position:absolute;
@@ -237,6 +350,30 @@ opacity:1;
 
 }
 
+}
+
+@keyframes jump{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes dance{
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
 }
 
 @media(max-width:1024px){

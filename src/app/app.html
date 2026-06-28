@@ -69,6 +69,40 @@ Forever Yours,
 
 </p>
 
+<div class="action-area">
+  <button *ngIf="messageStep === 1" class="secondary-button" (click)="sendLove(); $event.stopPropagation()">
+    Send Love you too
+  </button>
+
+  <div *ngIf="messageStep === 2" class="question-panel">
+    <p class="question-text">पुढच्या जन्मातही मला निवडशील ना?</p>
+    <div class="option-buttons">
+      <button class="yes-button" (click)="sayYes(); $event.stopPropagation()">Yes</button>
+      <button
+        class="no-button"
+        [ngStyle]="{ top: noButtonTop + 'px', left: noButtonLeft + 'px' }"
+        (mouseenter)="moveNoButton()"
+        (click)="moveNoButton(); $event.stopPropagation()"
+      >
+        No
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="messageStep === 3" class="dance-panel">
+    <div class="dance-hearts">
+      <span class="dance-heart">💃</span>
+      <span class="dance-heart">🕺</span>
+      <span class="dance-heart">❤️</span>
+    </div>
+    <p class="dance-text">Yeeee!</p>
+  </div>
+
+  <div *ngIf="messageStep === 4" class="final-message">
+    <p>I love you 💖</p>
+  </div>
+</div>
+
 </div>
 
 </div>
