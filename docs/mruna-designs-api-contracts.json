@@ -1,0 +1,92 @@
+{
+  "product": {
+    "id": "prod_123",
+    "name": "Aurora Midi Dress",
+    "slug": "aurora-midi-dress",
+    "category": "dresses",
+    "description": "Soft satin midi dress with elegant drape.",
+    "price": 79.99,
+    "currency": "USD",
+    "variants": [
+      {
+        "sku": "aurora-midi-dress-sand",
+        "size": "S",
+        "color": "Sand",
+        "price": 79.99,
+        "inventory": 12,
+        "images": ["https://cdn.example.com/products/aurora-1.jpg"]
+      }
+    ],
+    "images": [
+      "https://cdn.example.com/products/aurora-1.jpg",
+      "https://cdn.example.com/products/aurora-2.jpg"
+    ],
+    "attributes": {
+      "material": "satin",
+      "fit": "relaxed"
+    },
+    "rating": 4.6,
+    "reviewsCount": 18,
+    "createdAt": "2026-07-01T10:00:00.000Z"
+  },
+  "cartItem": {
+    "productId": "prod_123",
+    "variantSku": "aurora-midi-dress-sand",
+    "name": "Aurora Midi Dress",
+    "price": 79.99,
+    "quantity": 2,
+    "image": "https://cdn.example.com/products/aurora-1.jpg"
+  },
+  "checkoutRequest": {
+    "items": [
+      {
+        "productId": "prod_123",
+        "variantSku": "aurora-midi-dress-sand",
+        "quantity": 2
+      }
+    ],
+    "shippingAddress": {
+      "fullName": "Asha Kumar",
+      "line1": "123 Main St",
+      "city": "Austin",
+      "state": "TX",
+      "postalCode": "78701",
+      "country": "US"
+    },
+    "shippingMethod": "standard",
+    "paymentMethod": "mock_card",
+    "currency": "USD"
+  },
+  "checkoutResponse": {
+    "orderId": "ord_1001",
+    "status": "pending",
+    "subtotal": 159.98,
+    "tax": 12.8,
+    "shipping": 5.0,
+    "total": 177.78,
+    "estimatedDelivery": "2026-07-14"
+  },
+  "authResponse": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "refreshToken": "refresh_abc123",
+    "expiresIn": 900,
+    "user": {
+      "id": "usr_1",
+      "name": "Asha",
+      "email": "asha@example.com",
+      "role": "customer"
+    }
+  },
+  "errorResponse": {
+    "error": {
+      "code": "VALIDATION_ERROR",
+      "message": "Invalid checkout payload",
+      "details": [
+        {
+          "field": "shippingAddress.postalCode",
+          "message": "Postal code is required"
+        }
+      ]
+    }
+  }
+}

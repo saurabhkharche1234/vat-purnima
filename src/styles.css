@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #fffdf9;
+  color: #2f241d;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fffdf9;
+  color: #2f241d;
+}
+a { color: inherit; }
+img { max-width: 100%; }
+button, input { font: inherit; }
+
